@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* common style for all */
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+/* header design style here  */
+.container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+ 
+    
+}
+ .logo h1{
+   font-size: 35px;
+   font-weight: 600px;
+   font-family: 'Lobster', cursive;
+    
+} 
+
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(29, 19, 19);
+    font-weight: 400px;
+    padding: 10px;
+}
+
+.header-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
+.header-left h2{
+    font-size: 35px;
+   
+}
+
+.header-left p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.header-left h1{
+    color: #f09ce5;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer
+  }
+.header-left h1 span{
+    transition: .5s linear
+  }
+ .header-left h1:hover span:nth-child(1){
+    margin-right: 5px
+  }
+  .header-left h1:hover span:nth-child(1):after{
+    content: "'";
+  }
+  .header-left h1:hover span:nth-child(2){
+    margin-left: 30px
+  }
+  .header-left h1:hover span{
+    color: #6C63FF;
+    text-shadow: 0 0 10px #6C63FF,
+                 0 0 20px #6C63FF, 
+                 0 0 40px #6C63FF;
+  }
+
+.primaryButton{
+    outline: none;
+    padding:10px 15px;
+    color: white;
+    background-color: #6C63FF;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    margin-top: 25px;
+
+}
+.primaryButton:hover{
+    background-color: black;
+
+}
+.header-right img{
+    margin-top: 10%;
+    width:60%;
+    
+}
+
+/* partners logo design here  */
+.partners{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border-bottom: .5px solid gray;
+    padding: 20px;
+    margin: 10%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* products SECTION DESIGN HERE  */
+.services{
+    margin-top: 50px;
+}
+
+.Headtext{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.Headtext h1{
+    font-size: 40px;
+    display: inline-block;
+    border-bottom: 3px solid #6C63FF;
+    align-items: center;
+    font-weight: 500;
+
+}
+
+.Headtext span{
+    color: #6C63FF;   
+}
+
+.serviceName{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: auto;
+    
+}
+.service1{
+    width: 340px;
+}
+.service1:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+.serviceName img{
+    width: 100%;
+    height: 100%;
+
+}
+.service1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #6C63FF;
+    margin: 20px;
+    padding: 15px;
+}
+
+.service1 h2{
+    font-size: 20px;
+    color:#6C63FF;
+}
+#seeMoretext{
+    color: #6C63FF;
+    float: right;  
+    margin-right:10% ;
+}
+
+
+@media only screen and (max-width:700px){
+    .container{      
+        height: 50px;
+        justify-content: space-between;
+
+    }
+    .logo img{
+        height: 50px;
+        width: 50px;
+        margin-top: 5px;       
+    }
+    .menu ul li a{
+        text-decoration: none;
+        font-size: 15px;
+        color: white;     
+        padding: 10px;
+    }
+    .header-content{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .header-left h1{
+        font-size: 30px;
+    }
+    .header-left p{
+        font-size: 10px;
+        line-height: 25px;
+        margin: 20px 20px;
+    }
+    .Headtext h1{
+        font-size: 30px; 
+    }
+    .serviceName{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+    .serviceName img{
+        width: 50%;
+        height: 50%;   
+    }
+    .service1 h2{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .serviceName{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .serviceName img{
+        width: 80%;
+        height: 80%;   
+    }
+    .service1 h2{
+        font-size: 25px;
+    }
+}
