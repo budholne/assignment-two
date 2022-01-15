@@ -9,6 +9,7 @@
 /* common style for all */
 body{
     font-family: 'Oswald', sans-serif;
+    background: #f8f7f7;
 }
 
 
@@ -18,10 +19,9 @@ body{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    height: 80px;
- 
-    
+    height: 80px;   
 }
+
  .logo h1{
    font-size: 35px;
    font-weight: 600px;
@@ -65,8 +65,9 @@ body{
     line-height: 30px;
 }
 
+ /* header on demand animation code here  */
 .header-left h1{
-    color: #f09ce5;
+    color: #fc7474;
     font-size: 50px;
     font-weight: bold;
     font-family: monospace;
@@ -92,6 +93,7 @@ body{
                  0 0 40px #6C63FF;
   }
 
+  /* button design for all part where i have used the button  */
 .primaryButton{
     outline: none;
     padding:10px 15px;
@@ -108,10 +110,11 @@ body{
     background-color: black;
 
 }
+
+ /* header image here  */
 .header-right img{
     margin-top: 10%;
     width:60%;
-    
 }
 
 /* partners logo design here  */
@@ -121,6 +124,7 @@ body{
     border-bottom: .5px solid gray;
     padding: 20px;
     margin: 10%;
+    max-width: 1100px;
     justify-content: center;
     align-items: center;
 
@@ -129,11 +133,12 @@ body{
 /* products SECTION DESIGN HERE  */
 .services{
     margin-top: 50px;
+    margin-bottom: 8%;
 }
 
 .Headtext{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom:3%;
 }
 .Headtext h1{
     font-size: 40px;
@@ -158,12 +163,28 @@ body{
 .service1{
     width: 340px;
 }
+.pro-rate{
+    color: goldenrod;
+    padding:.2em;
+    font-weight: 500;
+
+}
+.pro-rate2{
+    padding: 6px;
+    font-size: 18px;
+    font-weight:500;
+}
+.price{
+    font-weight: 500;
+    padding:7px;
+    
+}
 .service1:hover{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 
-.serviceName img{
+.service1 img{
     width: 100%;
     height: 100%;
 
@@ -188,64 +209,328 @@ body{
     margin-right:10% ;
 }
 
+/* discount section style here  */
+.discount{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+   
+}
 
-@media only screen and (max-width:700px){
+.discount-left img{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+.discount-right{
+
+    text-align: center;
+    
+}
+.discount-left h1{
+    font-size: 35px ;
+}
+.discount-left h1 span{
+    color:#6C63FF;
+    font-weight: 700;
+    
+}
+.discount-right h1{
+    font-size: 35px;
+}
+.discount-right h1 span{
+    color:#6C63FF;
+    font-weight: 700;
+}
+.discount-right p{
+    font-size: 20px;
+    margin: 10px;
+}
+.discount-right input{
+    font-size: 20px;
+}
+/* footer section style sheets here  */
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+    margin-top: 5%;
+    
+}
+.footer-content{
+    margin-top:3%;
+}
+.social-icon{
+    display: flex;
+
+}
+.social-icon p{
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.social-icon p:hover{
+    color:#6C63FF;
+}
+
+
+  /*.................................
+   responsive media query here small device like mobile
+   ................................ */
+
+@media only screen and (max-width:600px){
     .container{      
         height: 50px;
         justify-content: space-between;
 
     }
-    .logo img{
-        height: 50px;
-        width: 50px;
-        margin-top: 5px;       
+    .logo h1{
+        margin-top: 5px;   
+        font-size: 20px;    
     }
-    .menu ul li a{
-        text-decoration: none;
+    .menu ul li a{       
         font-size: 15px;
-        color: white;     
-        padding: 10px;
+        color: black; 
+        padding: 5px;    
     }
+
     .header-content{
         display: grid;
         grid-template-columns:1fr;
     }
-    .header-left h1{
-        font-size: 30px;
+    .header-left h2{
+        font-size: 20px;
+    }
+    .header-content h1{
+        font-size: 18px;
     }
     .header-left p{
         font-size: 10px;
-        line-height: 25px;
-        margin: 20px 20px;
+        line-height: 15px;
     }
+    .primaryButton{
+        padding:10px 10px;
+        font-size: 15px;
+    }
+    .header-right img{
+        margin-top: 2%;
+        width:35%;       
+    }
+
+/* partner section responsiveness query  */
+.partners{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    margin: 4%;
+    border-top: 1px solid gray
+}
+
+
+/* products responsiveness  */
     .Headtext h1{
-        font-size: 30px; 
+        font-size: 20px; 
     }
+
     .serviceName{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    
     }
-    .serviceName img{
-        width: 50%;
+    .service1{       
+        border: 1px solid #6C63FF;
+        margin: 10px;
+        padding: 5px;
+    }
+    .service1 img{
+        width: 100%;
         height: 50%;   
+        
     }
+    
     .service1 h2{
         font-size: 20px;
     }
+    #seeMoretext{
+        margin-left: 0;
+        float: left;  
+        margin-right:0;
+    }
+
+/* discount section responsiveness here  */
+
+.discount{
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-@media only screen and (max-width: 500px){
+.discount-left img{
+    width: 50%;
+    margin-left: 8%;
+    margin-bottom: 15px;
+}
+.discount-left{
+    margin-left: 0;
+}
+.discount-left h1{
+    margin-left: 8%;
+    font-size: 20px ;
+}
+
+.discount-right h1{
+    font-size: 15px;
+    
+}
+
+.discount-right p{
+    font-size: 10px;
+    margin: 2%;
+}
+.discount-right input{
+    font-size: 10px;
+}
+
+}
+ /*.................................
+   responsive media query here tablet or ipad devices 
+   ................................ */
+
+@media only screen and (min-width:600px) {
+    
+   
+    .header-content{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+    }
+ 
+
+/* partner section responsiveness query  */
+.partners{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    margin: 4%;
+    border-top: 1px solid gray;
+}
+
+
+/* products responsiveness  */
+
     .serviceName{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .service1{       
+        border: 1px solid #6C63FF;
+        margin: 10px;
+        padding: 5px;
+    }
+    .service1 img{
+        width: 100%;
+        height: 50%;   
+     
+    }
+    
+    .service1 h2{
+        font-size: 20px;
+    }
+    #seeMoretext{
+        margin-left: 0;
+        float: right;  
+        margin-right:0;
+    }
+
+/* discount section responsiveness here  */
+
+.discount{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.discount-left img{
+    width: 50%;
+    margin-left: 8%;
+    margin-bottom: 15px;
+}
+
+
+ }
+
+  /*.................................
+   responsive media query here destop or laptop devices 
+   ................................ */
+ @media only screen and (min-width:1000px) {
+    
+    .header-content{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+    }
+    .logo h1{
+        margin-top: 10px;   
+        font-size: 35px;    
+    }
+    .menu ul li a{       
+        font-size: 25px;
+        color: black; 
+        padding: 10px;    
+    }
+    .partners{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
         padding: 20px;
+        margin: auto;
+        border-top: 1px solid gray;
+        justify-content: center;
+        align-items: center;
     }
-    .serviceName img{
-        width: 80%;
-        height: 80%;   
+    .serviceName{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+    
     }
+    .service1{       
+        border: 1px solid #6C63FF;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 5%;
+    }
+
+    .service1 img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;          
+    }
+    
     .service1 h2{
         font-size: 25px;
     }
-}
+    #seeMoretext{  
+        float: right;  
+        margin-right:20%;
+    }
+    .discount{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+ }
+
+ /* ................................
+ responsiveness query end here AND SPECIAL THANKS FOR READING MY CODE 
+ ..................................*/
+
